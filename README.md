@@ -1,17 +1,19 @@
 # Домашнее задание к занятию «Очереди RabbitMQ»
 
 
-### Задание 1. Установка RabbitMQ
+## Задание 1. Установка RabbitMQ
 
 Используя Vagrant или VirtualBox, создайте виртуальную машину и установите RabbitMQ. Добавьте management plug-in и зайдите в веб-интерфейс.
 
 Итогом выполнения домашнего задания будет приложенный скриншот веб-интерфейса RabbitMQ.
 
-### Выполнение задания 1. Установка RabbitMQ
+## Выполнение задания 1. Установка RabbitMQ
+
+### Cкриншот веб-интерфейса RabbitMQ
 
 ![](./img/Screenshot_1.png)
 
-### Задание 2. Отправка и получение сообщений
+## Задание 2. Отправка и получение сообщений
 
 Используя приложенные скрипты, проведите тестовую отправку и получение сообщения. Для отправки сообщений необходимо запустить скрипт producer.py.
 
@@ -25,17 +27,17 @@ $ pip install pika
 Для закрепления материала можете попробовать модифицировать скрипты, чтобы поменять название очереди и отправляемое сообщение.
 
 
-### Выполение задания 2. Отправка и получение сообщений
+## Выполение задания 2. Отправка и получение сообщений
 
-Запуск producer.py
+### Запуск producer.py
 
 ![](./img/Screenshot_2.png)
 
-Запуск consumer.py
+### Запуск consumer.py
 
 ![](./img/Screenshot_3.png)
 
-### Задание 3. Подготовка HA кластера
+## Задание 3. Подготовка HA кластера
 
 Используя Vagrant или VirtualBox, создайте вторую виртуальную машину и установите RabbitMQ. Добавьте в файл hosts название и IP-адрес каждой машины, чтобы машины могли видеть друг друга по имени.
 
@@ -60,30 +62,30 @@ $ rabbitmqadmin get queue='hello'
 
 Приложите скриншот результата работы второго скрипта.
 
-### Выполнение задания 3. Подготовка HA кластера
+## Выполнение задания 3. Подготовка HA кластера
 
-Кластер из двух нод
+### Кластер из двух нод
 
 ![](./img/Screenshot_4.png)
 
-Политика ha-all
+### Политика ha-all
 
 ![](./img/Screenshot_5.png)
 
-Статус первой ноды из команды docker exec -it rmq01 rabbitmqctl cluster_status </br>
+### Статус первой ноды из команды docker exec -it rmq01 rabbitmqctl cluster_status </br>
 
-[Nods 1](./Noda 1.txt)</br>
+![Nodf 1](./Noda 1.txt)</br>
 
-Статус второй ноды из команды docker exec -it rmq02 rabbitmqctl cluster_status </br>
+### Статус второй ноды из команды docker exec -it rmq02 rabbitmqctl cluster_status </br>
 
-[Noda 2](./Noda 2.txt)</br>
+![Noda 2](./Noda 2.txt)</br>
 
-Вывод команды docker exec -it rmq01 rabbitmqadmin get queue='hello и docker exec -it rmq02 rabbitmqadmin get queue='hello после запуска скрипта producer.py
+### Вывод команды docker exec -it rmq01 rabbitmqadmin get queue='hello и docker exec -it rmq02 rabbitmqadmin get queue='hello после запуска скрипта producer.py
 
 ![](./img/Screenshot_6.png)
 
-Останавливаем первую ноду docker stop rmq01
-Правим скрипт consumer.py
-И запускаем его python3 consumer.py
+### Останавливаем первую ноду docker stop rmq01
+### Правим скрипт consumer.py
+### И запускаем его python3 consumer.py
 
 ![](./img/Screenshot_7.png)
