@@ -1,7 +1,7 @@
 # Домашнее задание к занятию «Очереди RabbitMQ»
 
 
-###Задание 1. Установка RabbitMQ
+### Задание 1. Установка RabbitMQ
 
 Используя Vagrant или VirtualBox, создайте виртуальную машину и установите RabbitMQ. Добавьте management plug-in и зайдите в веб-интерфейс.
 
@@ -11,7 +11,7 @@
 
 ![](./img/Screenshot_1.png)
 
-###Задание 2. Отправка и получение сообщений
+### Задание 2. Отправка и получение сообщений
 
 Используя приложенные скрипты, проведите тестовую отправку и получение сообщения. Для отправки сообщений необходимо запустить скрипт producer.py.
 
@@ -35,7 +35,7 @@ $ pip install pika
 
 ![](./img/Screenshot_3.png)
 
-###Задание 3. Подготовка HA кластера
+### Задание 3. Подготовка HA кластера
 
 Используя Vagrant или VirtualBox, создайте вторую виртуальную машину и установите RabbitMQ. Добавьте в файл hosts название и IP-адрес каждой машины, чтобы машины могли видеть друг друга по имени.
 
@@ -70,11 +70,13 @@ $ rabbitmqadmin get queue='hello'
 
 ![](./img/Screenshot_5.png)
 
-Статус первой ноды из команды docker exec -it rmq01 rabbitmqctl cluster_status
-[](./Noda 1.txt)
+Статус первой ноды из команды docker exec -it rmq01 rabbitmqctl cluster_status </br>
 
-Статус второй ноды из команды docker exec -it rmq02 rabbitmqctl cluster_status
-[](./Noda 2.txt)
+[Nods 1](./Noda 1.txt)</br>
+
+Статус второй ноды из команды docker exec -it rmq02 rabbitmqctl cluster_status </br>
+
+[Noda 2](./Noda 2.txt)</br>
 
 Вывод команды docker exec -it rmq01 rabbitmqadmin get queue='hello и docker exec -it rmq02 rabbitmqadmin get queue='hello после запуска скрипта producer.py
 
