@@ -9,7 +9,7 @@
 
 ## Выполнение задания 1. Установка RabbitMQ
 
-### Cкриншот веб-интерфейса RabbitMQ
+### Cкриншот веб-интерфейса **RabbitMQ**
 
 ![](./img/Screenshot_1.png)
 
@@ -29,11 +29,11 @@ $ pip install pika
 
 ## Выполение задания 2. Отправка и получение сообщений
 
-### Запуск producer.py
+### Запуск **producer.py**
 
 ![](./img/Screenshot_2.png)
 
-### Запуск consumer.py
+### Запуск **consumer.py**
 
 ![](./img/Screenshot_3.png)
 
@@ -68,24 +68,24 @@ $ rabbitmqadmin get queue='hello'
 
 ![](./img/Screenshot_4.png)
 
-### Политика ha-all
+### Политика **ha-all**
 
 ![](./img/Screenshot_5.png)
 
-### Статус первой ноды из команды docker exec -it rmq01 rabbitmqctl cluster_status </br>
+### Статус первой ноды из команды **docker exec -it rmq01 rabbitmqctl cluster_status**
 
-[Noda 1](./Noda_1.txt)</br>
+[Noda 1](./Noda_1.txt)
 
-### Статус второй ноды из команды docker exec -it rmq02 rabbitmqctl cluster_status </br>
+### Статус второй ноды из команды **docker exec -it rmq02 rabbitmqctl cluster_status**
 
-[Noda 2](./Noda_2.txt)</br>
+[Noda 2](./Noda_2.txt)
 
-### Вывод команды docker exec -it rmq01 rabbitmqadmin get queue='hello и docker exec -it rmq02 rabbitmqadmin get queue='hello после запуска скрипта producer.py
+### Вывод команды **docker exec -it rmq01 rabbitmqadmin get queue='hello** и **docker exec -it rmq02 rabbitmqadmin get queue='hello** после запуска скрипта **producer.py**
 
 ![](./img/Screenshot_6.png)
 
-### Останавливаем первую ноду docker stop rmq01
-### Правим скрипт consumer.py
-### И запускаем его python3 consumer.py
+### Останавливаем первую ноду **docker stop rmq01**
+### Правим скрипт **consumer.py**
+### И запускаем его **python3 consumer.py**
 
 ![](./img/Screenshot_7.png)
