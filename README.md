@@ -74,11 +74,11 @@ $ rabbitmqadmin get queue='hello'
 
 ### Статус первой ноды из команды docker exec -it rmq01 rabbitmqctl cluster_status </br>
 
-![Nodf 1](./Noda 1.txt)</br>
+[Noda 1](./Noda_1.txt)</br>
 
 ### Статус второй ноды из команды docker exec -it rmq02 rabbitmqctl cluster_status </br>
 
-![Noda 2](./Noda 2.txt)</br>
+[Noda 2](./Noda_2.txt)</br>
 
 ### Вывод команды docker exec -it rmq01 rabbitmqadmin get queue='hello и docker exec -it rmq02 rabbitmqadmin get queue='hello после запуска скрипта producer.py
 
