@@ -1,0 +1,76 @@
+Cluster status of node rabbit@rmq01 ...
+[1mBasics[0m
+
+Cluster name: rabbit@rmq01
+Total CPU cores available cluster-wide: 8
+
+[1mDisk Nodes[0m
+
+rabbit@rmq01
+rabbit@rmq02
+
+[1mRunning Nodes[0m
+
+rabbit@rmq01
+rabbit@rmq02
+
+[1mVersions[0m
+
+rabbit@rmq01: RabbitMQ 3.13.7 on Erlang 26.2.5.16
+rabbit@rmq02: RabbitMQ 3.13.7 on Erlang 26.2.5.16
+
+[1mCPU Cores[0m
+
+Node: rabbit@rmq01, available CPU cores: 4
+Node: rabbit@rmq02, available CPU cores: 4
+
+[1mMaintenance status[0m
+
+Node: rabbit@rmq01, status: not under maintenance
+Node: rabbit@rmq02, status: not under maintenance
+
+[1mAlarms[0m
+
+(none)
+
+[1mNetwork Partitions[0m
+
+(none)
+
+[1mListeners[0m
+
+Node: rabbit@rmq01, interface: [::], port: 15672, protocol: http, purpose: HTTP API
+Node: rabbit@rmq01, interface: [::], port: 15692, protocol: http/prometheus, purpose: Prometheus exporter API over HTTP
+Node: rabbit@rmq01, interface: [::], port: 25672, protocol: clustering, purpose: inter-node and CLI tool communication
+Node: rabbit@rmq01, interface: [::], port: 5672, protocol: amqp, purpose: AMQP 0-9-1 and AMQP 1.0
+Node: rabbit@rmq02, interface: [::], port: 15672, protocol: http, purpose: HTTP API
+Node: rabbit@rmq02, interface: [::], port: 15692, protocol: http/prometheus, purpose: Prometheus exporter API over HTTP
+Node: rabbit@rmq02, interface: [::], port: 25672, protocol: clustering, purpose: inter-node and CLI tool communication
+Node: rabbit@rmq02, interface: [::], port: 5672, protocol: amqp, purpose: AMQP 0-9-1 and AMQP 1.0
+
+[1mFeature flags[0m
+
+Flag: classic_mirrored_queue_version, state: enabled
+Flag: classic_queue_type_delivery_support, state: enabled
+Flag: detailed_queues_endpoint, state: enabled
+Flag: direct_exchange_routing_v2, state: enabled
+Flag: drop_unroutable_metric, state: enabled
+Flag: empty_basic_get_metric, state: enabled
+Flag: feature_flags_v2, state: enabled
+Flag: implicit_default_bindings, state: enabled
+Flag: khepri_db, state: disabled
+Flag: listener_records_in_ets, state: enabled
+Flag: maintenance_mode_status, state: enabled
+Flag: message_containers, state: enabled
+Flag: message_containers_deaths_v2, state: enabled
+Flag: quorum_queue, state: enabled
+Flag: quorum_queue_non_voters, state: enabled
+Flag: restart_streams, state: enabled
+Flag: stream_filtering, state: enabled
+Flag: stream_queue, state: enabled
+Flag: stream_sac_coordinator_unblock_group, state: enabled
+Flag: stream_single_active_consumer, state: enabled
+Flag: stream_update_config_command, state: enabled
+Flag: tracking_records_in_ets, state: enabled
+Flag: user_limits, state: enabled
+Flag: virtual_host_metadata, state: enabled
